@@ -66,7 +66,7 @@ const extraQueryParams = {
 };
 
 const response = await client.chat.completions.create({
-    model: "mistralai/Mixtral-8x7B-Instruct-v0.1-fp16",
+    model: "meta/Llama-3.3-70B-Instruct-fp16",
     messages: [{ role: "user", content: "Hello!" }],
     extra_query: extraQueryParams  // Arbitrages providers
 });
@@ -80,7 +80,7 @@ curl -X POST "https://api.makehub.ai/v1/chat/completions" \
   -H "Authorization: Bearer your_api_key" \
   -H "Content-Type: application/json" \
   -d '{
-    "model": "mistralai/Mixtral-8x7B-Instruct-v0.1-fp16",
+    "model": "meta/Llama-3.3-70B-Instruct-fp16",
     "messages": [{"role": "user", "content": "Hello!"}],
     "extra_query": {
       "min_throughput": "50",

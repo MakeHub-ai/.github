@@ -42,7 +42,7 @@ extra_query_params = {
 }
 
 response = client.chat.completions.create(
-    model="mistralai/meta/Llama-3.3-70B-Instruct-fp16",
+    model="meta/Llama-3.3-70B-Instruct-fp16",
     messages=[{"role": "user", "content": "Hello!"}],
     extra_query=extra_query_params  # Arbitrages providers
 )
